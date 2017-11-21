@@ -15,6 +15,7 @@ send_event(entity,       # Source of the event
                          #  - internal: visible only to admin (i.e. never returns via api)
            userid,       # Actor
            dataset_id,   # Dataset in question 
+           owner,        # Owner of the dataset
            ownerid,      # Owner of the dataset
            flow_id,      # Related flow id 
            pipeline_id,  # Related pipeline id

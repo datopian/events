@@ -18,6 +18,7 @@ def _send(es: elasticsearch.Elasticsearch,
           findability,  # one of "published/private/internal":
           userid,       # Actor
           dataset_id,   # Dataset in question
+          owner,      # Owner of the dataset
           ownerid,      # Owner of the dataset
           flow_id,      # Related flow id
           pipeline_id,  # Related pipeline id
@@ -31,6 +32,7 @@ def _send(es: elasticsearch.Elasticsearch,
         "findability": findability,
         "userid": userid,
         "dataset": dataset_id,
+        "owner": owner,
         "ownerid": ownerid,
         "flow": flow_id,
         "pipeline": pipeline_id,
