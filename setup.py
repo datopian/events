@@ -21,7 +21,7 @@ def read(*paths):
 PACKAGE = 'events'
 NAME = PACKAGE.replace('_', '-')
 INSTALL_REQUIRES = [
-    'elasticsearch'
+    'elasticsearch>=5.0,<6.0'
 ]
 TESTS_REQUIRE = [
     'pylama',
