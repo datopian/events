@@ -1,3 +1,5 @@
+Python API for sending Datahub Events to ElasticSearch service
+
 # Tracking
 
 [![Travis](https://img.shields.io/travis/datahq/events/master.svg)](https://travis-ci.org/datahq/events)
