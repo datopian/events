@@ -9,7 +9,7 @@ import elasticsearch
 @pytest.fixture()
 def es():
     es = elasticsearch.Elasticsearch()
-    es.indices.delete(events.EVENTS_INDEX_NAME)
+    es.indices.delete(index=events.EVENTS_INDEX_NAME, ignore=[400, 404])
     es.indices.flush()
     return es
 
@@ -46,6 +46,3 @@ def test_send(es: elasticsearch.Elasticsearch):
     assert len(hits) == 1
     for k, v in expected.items():
         assert hits[0]['_source'][k] == v
-
-
-
