@@ -4,6 +4,9 @@ sudo:
 dist:
   trusty
 
+services:
+  - elasticsearch
+
 addons:
   apt:
     packages:
@@ -22,6 +25,10 @@ env:
 install:
   - make install
   - pip install coveralls
+
+before_script:
+  - sleep 30
+  - curl localhost:9200
 
 script:
   - make test
